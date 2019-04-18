@@ -97,7 +97,6 @@ public class EmailService {
             } catch (MessagingException ex) {
                 logger.error("Failed to send email to: {}", to);
                 logger.error("Exception is: {}", ex.getMessage());
-                ex.printStackTrace();
                 result = failureResult;
             }
         }
