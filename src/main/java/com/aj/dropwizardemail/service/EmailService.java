@@ -21,6 +21,8 @@ public class EmailService {
     public static final String to = "techdeveloper.aj@gmail.com";
     // Sender's Email ID
     public static final String from = "techdeveloper.aj@gmail.com";
+    // Sender's Name
+    public static final String fromName = "Aj Tech Developer";
     public static final String emailSubject = "Mail from Dropwizard Email Application";
     public static final String msg = "<p>Hi</p>\n" +
             "<p>This is a mail from Dropwizard Email Application!!!</p>\n" +
@@ -39,7 +41,7 @@ public class EmailService {
                 // Create a default MimeMessage object.
                 MimeMessage message = new MimeMessage(session);
                 // Set From
-                message.setFrom(new InternetAddress(from));
+                message.setFrom(new InternetAddress(from, fromName));
                 // Set To
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
                 // Set Subject
@@ -76,7 +78,7 @@ public class EmailService {
                 // Create a default MimeMessage object.
                 MimeMessage message = new MimeMessage(session);
                 // Set From
-                message.setFrom(new InternetAddress(from));
+                message.setFrom(new InternetAddress(from, fromName));
                 // Set To
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
                 // Set Subject
@@ -117,7 +119,7 @@ public class EmailService {
                 // Create a default MimeMessage object.
                 MimeMessage message = new MimeMessage(session);
                 // Set From
-                message.setFrom(new InternetAddress(from));
+                message.setFrom(new InternetAddress(from, fromName));
                 // Set To
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
                 // Set Subject
